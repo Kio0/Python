@@ -1,0 +1,25 @@
+
+def down(sim)
+ if (sim>'A')&&(sim<'Z') then 
+s="sim".ord
+sim=("sim".ord+32).chr
+end
+return(sim)
+end
+class Class
+   alias oldNew  new
+   def new(*args)
+      str=gets
+      str=' '+str
+g=str.length-1
+for i in 0..g  do  
+if (str[i]!=' ')  then print (  down(str[i])   )  end
+if (str[i]==' ') && (str[i+1]!=' ') then puts" "  end
+end
+      oldNew(*args)
+   end
+end
+class FIO
+end
+n = FIO.new
+a=gets
